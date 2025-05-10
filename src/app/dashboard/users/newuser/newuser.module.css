@@ -1,0 +1,104 @@
+.formContainer {
+    background: #fff;
+    padding: 2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  }
+  
+  .title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  .form {
+    display: grid;
+    gap: 1.25rem;
+  }
+  
+  .formGroup {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .formContainer label {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: #333;
+  }
+  
+  .formContainer input, .formContainer
+  select {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+  
+  .formContainer input:focus,
+  .formContainer select:focus {
+    border-color: #0070f3;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 112, 243, 0.2);
+  }
+  
+  .submitButton {
+    background-color: #1437ff;
+    color: white;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submitButton:hover {
+    background-color: #005bb5;
+  }
+  
+  /* newuser.module.css */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.table th,
+.table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.table th {
+  background-color: #f5f5f5;
+  color: #333;
+  /* font-weight: 600; */
+}
+
+.table tr:hover {
+  background-color: #f9f9f9;
+}
+
+.removeButton {
+  background-color: #e53935;
+  color: #fff;
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.removeButton:hover {
+  background-color: #c62828;
+}

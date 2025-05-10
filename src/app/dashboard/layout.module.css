@@ -1,0 +1,25 @@
+.container {
+    display: flex;
+    height: 100vh;
+}
+.sidebarWrapper {
+  display: block;
+}
+
+/* Hide sidebar by default on small screens */
+@media screen and (max-width: 1082px) {
+  .sidebarWrapper {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: var(--background);
+    height: 100vh;
+    width: 280px;
+  }
+
+  .sidebarMobileVisible {
+    display: block;
+  }
+}

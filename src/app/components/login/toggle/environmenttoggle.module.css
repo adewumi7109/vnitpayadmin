@@ -1,0 +1,56 @@
+.toggleWrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.toggleContainer {
+  position: relative;
+  width: 130px;
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 9999px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  overflow: hidden;
+}
+
+.toggleButton {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background-color:#1437ff;
+  border-radius: 9999px;
+  top: 0;
+  left: 0;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  left: 50%;
+}
+
+.option {
+  flex: 1;
+  border: none;
+  background: transparent;
+  z-index: 2;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  color: #333;
+  transition: color 0.3s ease;
+  height: 100%;
+}
+
+.active {
+  color: white;
+}

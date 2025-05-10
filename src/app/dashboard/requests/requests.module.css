@@ -1,0 +1,19 @@
+.cont{
+      box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 7px;
+}
+
+.yes{
+  background-color: green;
+    color: white;
+  padding: 3px 7px;
+  border-radius: 10px;
+}
+.no{
+  background-color: red;
+  color: white;
+  padding: 3px 7px;
+  border-radius: 10px;
+}
