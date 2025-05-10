@@ -18,22 +18,22 @@ function page() {
   const voucherData = [
     {
       title: "Voucher Balance",
-      amount: "5,484,780.00",
+      amount: "₦5,484,780.00",
       icon: <HiReceiptPercent />,
     },
     {
       title: "Pending Settlement",
-      amount: "5,484,780.00",
+      amount: "₦5,484,780.00",
       icon: <MdPendingActions />,
     },
     {
       title: "Token Balance",
-      amount: "5,484,780.00",
+      amount: "₦5,484,780.00",
       icon: <MdOutlineAccountBalanceWallet />,
     },
-    { title: "Bank Balance", amount: "5,484,780.00", icon: <RiBankCardLine /> },
-    { title: "VFD Balance", amount: "5,484,780.00", icon: <CiReceipt /> },
-    { title: "Paystack Balance", amount: "5,484,780.00", icon: <CgPaypal /> },
+    { title: "Bank Balance", amount: "₦5,484,780.00", icon: <RiBankCardLine /> },
+    { title: "VFD Balance", amount: "₦5,484,780.00", icon: <CiReceipt /> },
+    { title: "Paystack Balance", amount: "₦5,484,780.00", icon: <CgPaypal /> },
   ];
   const { showModal } = useModal();
   const toggleModal = () => {
