@@ -8,7 +8,7 @@ import { useModal } from "@/app/context/ModalContext";
 const roles = ["Merchant", "Support", "Admin", "Agent"];
 
 interface Merchant {
-  MerchantId: number;
+  MerchantId: string;
   CompanyName: string;
 }
 
@@ -46,9 +46,9 @@ const handleMerchantSelect = (merchant: Merchant) => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleRemoveMerchant = (merchantId: number) => {
-    setMerchants((prev) => prev.filter(m => m.MerchantId !== merchantId));
-  };
+  // const handleRemoveMerchant = (merchantId: number) => {
+  //   setMerchants((prev) => prev.filter(m => m.MerchantId !== merchantId));
+  // };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
