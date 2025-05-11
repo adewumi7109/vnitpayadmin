@@ -22,14 +22,14 @@ const { apiBaseUrl } = useApiEnv();
   }
 
   try {
-    // const api = createApiClient(apiBaseUrl);
-    // const res = await api.post(endpoints.auth.login, {
-    //   email,
-    //   password,
-    // });
+    const api = createApiClient(apiBaseUrl);
+    const res = await api.post(endpoints.auth.login, {
+      email,
+      password,
+    });
 
     // Handle login success — save token, etc.
-    // console.log('Login success:', res.data);
+    console.log('Login success:', res.data);
     
     router.push('/dashboard');
   } catch (err: any) {
