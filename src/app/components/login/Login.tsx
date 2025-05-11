@@ -23,7 +23,8 @@ const { apiBaseUrl } = useApiEnv();
 
   try {
     const api = createApiClient(apiBaseUrl);
-    const res = await api.post(endpoints.auth.login, {
+   const url = "https://test.vnitpay.com.ng/api/auth/login"
+    const res = await api.post(url, {
       email,
       password,
     });
