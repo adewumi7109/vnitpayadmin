@@ -15,7 +15,7 @@
     gap: 20px;
     align-items: center;
     font-size: 35px;
-    color: var(--background);
+    color: var(--lightblue);
     font-weight: 2px;
 }
 .shadow{
@@ -34,6 +34,7 @@
 }
 .amount{
     font-size:  1.3rem;
+    color: var(--background);
 }
 
 .cardCont{

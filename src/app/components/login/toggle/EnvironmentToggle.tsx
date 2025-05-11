@@ -2,9 +2,11 @@
 
 import React, { useState } from 'react';
 import styles from './environmenttoggle.module.css';
+import { useApiEnv } from '@/app/context/ApiEnvContext';
 
 const EnvironmentToggle = () => {
-  const [active, setActive] = useState<'test' | 'live'>('test');
+  const { apiEnv, setApiEnv } = useApiEnv();
+  const [active, setActive] = useState<'test' | 'live'>(apiEnv);
 
   return (
     <div className={styles.toggleWrapper}>
@@ -13,19 +15,24 @@ const EnvironmentToggle = () => {
           className={`${styles.toggleButton} ${
             active === 'test' ? styles.left : styles.right
           }`}
-          
         />
         <button
-        type="button" 
+          type="button"
           className={`${styles.option} ${active === 'test' ? styles.active : ''}`}
-          onClick={() => setActive('test')}
+          onClick={() => {
+            setActive('test');
+            setApiEnv('test');
+          }}
         >
           Test
         </button>
         <button
-        type="button" 
+          type="button"
           className={`${styles.option} ${active === 'live' ? styles.active : ''}`}
-          onClick={() => setActive('live')}
+          onClick={() => {
+            setActive('live');
+            setApiEnv('live');
+          }}
         >
           Live
         </button>

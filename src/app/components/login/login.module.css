@@ -1,6 +1,6 @@
 .cont {
   height: 100vh;
-  background-color: var(--background); /* neutral light gray */
+  background-color: #f1f1f1; /* neutral light gray */
   display: flex;
   justify-content: center;
   align-items: center;

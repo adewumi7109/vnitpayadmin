@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { ApiEnvProvider } from "./context/ApiEnvContext";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,7 +29,10 @@ export default function RootLayout({
         <link rel="icon" href="/logo/vnitpay symbol.svg" type="image/svg+xml" />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <ApiEnvProvider>
+
         {children}
+      </ApiEnvProvider>
       </body>
     </html>
   );

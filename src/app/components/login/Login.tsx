@@ -5,23 +5,39 @@ import styles from './login.module.css';
 import Button from '../button/Button';
 import { useRouter } from 'next/navigation';
 import EnvironmentToggle from './toggle/EnvironmentToggle';
+import { useApiEnv } from '@/app/context/ApiEnvContext';
+import { createApiClient, endpoints } from '@/app/utils/axios';
 
 function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
  const router = useRouter();
-  const handleClick = (e: React.FormEvent) => {
-    e.preventDefault();
+const { apiBaseUrl } = useApiEnv();
+ const handleClick = async (e: React.FormEvent) => {
+  e.preventDefault();
 
-    // You can add authentication logic here
-    if (!email || !password) {
-      alert('Please enter email and password.');
-      return;
-    }
+  if (!email || !password) {
+    alert('Please enter email and password.');
+    return;
+  }
+
+  try {
+    // const api = createApiClient(apiBaseUrl);
+    // const res = await api.post(endpoints.auth.login, {
+    //   email,
+    //   password,
+    // });
+
+    // Handle login success — save token, etc.
+    // console.log('Login success:', res.data);
     
-
     router.push('/dashboard');
-  };
+  } catch (err: any) {
+    console.error('Login error:', err.response?.data || err.message);
+    alert('Login failed. Please check your credentials.');
+  }
+};
+
 
   return (
     <div className={styles.cont}>

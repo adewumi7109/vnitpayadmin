@@ -13,8 +13,10 @@ import { CiReceipt } from "react-icons/ci";
 import { CgPaypal } from "react-icons/cg";
 import { useModal } from "@/app/context/ModalContext";
 import DashboardForm from "../components/dashboard/forms/dashboard/DashboardForm";
+import { useApiEnv } from "../context/ApiEnvContext";
 
 function page() {
+  const { apiBaseUrl } = useApiEnv();
   const voucherData = [
     {
       title: "Voucher Balance",
